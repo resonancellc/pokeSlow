@@ -1,0 +1,45 @@
+#include <dirent.h>
+#include <stdio.h>
+#include <string.h>
+#include <3ds.h>
+#include "pokeFind.h"
+#include "indexList.h"
+#include <stdlib.h>
+#include <unistd.h>
+
+int pokeSlow(void){
+	FILE* fp;
+	fp = fopen("pk/bank/bankgb","rb");
+	if(fp == NULL){
+		printf("%s","Error opening bankgb\n");
+	} else {
+		printf("%s","Opened bankgb!\n");
+		fseek(fp, 0, SEEK_END);
+		long fsize = ftell(fp);
+		fseek(fp, 0, SEEK_SET);
+		char *saveFile = malloc(fsize+1);
+		fread(saveFile, fsize, 1, fp);
+		fclose(fp);
+		int pokeIndex = pokeSpecFind(saveFile,1);
+		printf("%s","\nOriginal Pokemon Species\n");
+		printf("%s",pokeSpec[pokeIndex]);
+		printf("%s","\nchanged to\n");
+		int r = 37;
+		printf("%s",pokeSpec[r]);
+		printf("%s","\n");
+		int j=1;
+		unlink("pk/bank/bankgb.bak");
+		FILE* fpBak = fopen("pk/bank/bankgb.bak","ab");
+		fwrite(&saveFile,1,1,fpBak);
+		fclose(fpBak);
+		unlink("");
+		FILE* fpSlow = fopen("pk/bank/bankgb","ab");
+		fwrite(&r,1,1,fpSlow);
+		while(j<33){
+			fwrite(&saveFile[j],1,1,fpSlow);
+			j++;
+		}
+		fclose(fpSlow);
+	}
+	return 0;
+}

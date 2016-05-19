@@ -1,0 +1,82 @@
+#include <dirent.h>
+#include <stdio.h>
+#include <string.h>
+#include <3ds.h>
+#include "pokeFind.h"
+#include "indexList.h"
+#include <stdlib.h>
+#include <unistd.h>
+
+int pokeSlow(void){
+	FILE* fp;
+	fp = fopen("/pk/bank/bankgb","rb");
+	if(fp == NULL){
+		printf("%s","Error opening bankgb\n");
+	} else {
+		printf("%s","Opened bankgb!\n");
+		fseek(fp, 0, SEEK_END);
+		long fsize = ftell(fp);
+		fseek(fp, 0, SEEK_SET);
+		char *saveFile = malloc(fsize+1);
+		fread(saveFile, fsize, 1, fp);
+		fclose(fp);
+		int pokeIndex = pokeSpecFind(saveFile,1);
+		printf("%s","\nOriginal Pokemon Species\n");
+		printf("%s",pokeSpec[pokeIndex]);
+		printf("%s","\nchanged to\n");
+		int r = 37;
+		printf("%s",pokeSpec[r]);
+		printf("%s","\n");
+		FILE* fpBak = fopen("/pk/bank/bankgb.bak","wb");
+		//Backup bankgb
+		int z=0;
+		while(z<fsize){
+			fwrite(&saveFile[z],1,1,fpBak);
+			z++;
+		}
+		fclose(fpBak);
+		unlink("/pk/bank/bankgb");
+		int numberOfPokes = saveFile[0x100];
+		FILE* fpSlow = fopen("/pk/bank/bankgb","ab");
+		//Write begining of bankgb
+		int y=0;
+		while(y<0x101){
+			fwrite(&saveFile[y],1,1,fpSlow);
+			y++;
+		}
+		//Write Slowpoke species on all pokemon listings
+		y=0;
+		while(y<numberOfPokes){
+			fwrite(&r,1,1,fpSlow);
+			y++;
+		}
+		//Write bankgb until pokemon start
+//		y=0x101+numberOfPokes;
+		y=0x103;
+		while(y<pokeStartFind(1)){
+			fwrite(&saveFile[y],1,1,fpSlow);
+			y++;
+		}
+		//Rewrite the pokemon
+		int x=1;
+		while(x<numberOfPokes+1){
+			int w=pokeStartFind(x);
+			int pokeEnd=pokeEndFind(x);
+			fwrite(&r,1,1,fpSlow);
+			w++;
+			while(w<pokeEnd){
+				fwrite(&saveFile[w],1,1,fpSlow);
+				w++;
+			}
+			x++;
+		}
+		//Write the end of bankgb
+		y=pokeEndFind(numberOfPokes);
+		while(y<fsize){
+			fwrite(&saveFile[y],1,1,fpSlow);
+			y++;
+		}
+		fclose(fpSlow);
+	}
+	return 0;
+}
