@@ -1,5 +1,7 @@
 main.o: /home/ubuntu/pokeSlow/source/main.c \
- /home/ubuntu/pokeSlow/source/bankgb.h \
+ /home/ubuntu/pokeSlow/source/sav.h /home/ubuntu/pokeSlow/source/bankgb.h \
+ /home/ubuntu/pokeSlow/source/pokeFind.h \
+ /home/ubuntu/pokeSlow/source/indexList.h \
  /opt/devkitPro/libctru/include/3ds.h \
  /opt/devkitPro/libctru/include/3ds/types.h \
  /opt/devkitPro/libctru/include/3ds/result.h \
@@ -63,10 +65,16 @@ main.o: /home/ubuntu/pokeSlow/source/main.c \
  /opt/devkitPro/libctru/include/3ds/sdmc.h \
  /opt/devkitPro/libctru/include/3ds/romfs.h \
  /opt/devkitPro/libctru/include/3ds/font.h \
- /home/ubuntu/pokeSlow/source/pokeFind.h \
- /home/ubuntu/pokeSlow/source/indexList.h
+ /home/ubuntu/pokeSlow/source/menu.h \
+ /home/ubuntu/pokeSlow/source/pokeIndex.h
+
+/home/ubuntu/pokeSlow/source/sav.h:
 
 /home/ubuntu/pokeSlow/source/bankgb.h:
+
+/home/ubuntu/pokeSlow/source/pokeFind.h:
+
+/home/ubuntu/pokeSlow/source/indexList.h:
 
 /opt/devkitPro/libctru/include/3ds.h:
 
@@ -194,6 +202,6 @@ main.o: /home/ubuntu/pokeSlow/source/main.c \
 
 /opt/devkitPro/libctru/include/3ds/font.h:
 
-/home/ubuntu/pokeSlow/source/pokeFind.h:
+/home/ubuntu/pokeSlow/source/menu.h:
 
-/home/ubuntu/pokeSlow/source/indexList.h:
+/home/ubuntu/pokeSlow/source/pokeIndex.h:
