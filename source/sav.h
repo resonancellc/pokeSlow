@@ -16,13 +16,13 @@ char* saveOpen(void){
 		printf("%s","Error opening bankgb\n");
 		return "Error";
 	} else {
-		printf("%s","Opened bankgb!\n");
 		fseek(fp, 0, SEEK_END);
 		unsigned int fsize = 0x8dff;
 		fseek(fp, 0, SEEK_SET);
 		char *saveFile = malloc(fsize+1);
 		fread(saveFile, fsize, 1, fp);
 		fclose(fp);
+		printf("%s","Opened bankgb!\n");
 		return saveFile;
 	}
 }
