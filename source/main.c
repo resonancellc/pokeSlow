@@ -52,6 +52,7 @@ int main(int argc, char **argv)
 			newIndex=pokeIndexFind(192,pokeIndex[newIndex]);
                 	pokeSpecEdit(saveFile,oldIndex,&newIndex);
 			job=100;
+			free(saveFile);
 		} else if(job==1){
 			saveFile=saveOpen();
 			oldIndex=indexSelectMenu(saveFile);
@@ -60,6 +61,7 @@ int main(int argc, char **argv)
 	                int newAtkIndex=newAttackIndex();
 	                attackEdit(saveFile,oldAtkIndex,newAtkIndex);
 			job=100;
+			free(saveFile);
 		} else if(job==2){
 			saveFile=saveOpen();
                         oldIndex=indexSelectMenu(saveFile);
@@ -67,22 +69,26 @@ int main(int argc, char **argv)
                         int level=levelSelect();
                         levelEdit(saveFile,oldIndex,level);
                         job=100;
+			free(saveFile);
 		} else if(job==3){
 			saveFile=saveOpen();
                         oldIndex=indexSelectMenu(saveFile);
                         oldIndex=pokeStartFind(oldIndex-0x100);
                         ivMax(saveFile,oldIndex);
 			job=100;
+			free(saveFile);
 		} else if(job==4){
 			saveFile=saveOpen();
 			oldIndex=indexSelectMenu(saveFile);
 			oldIndex=pokeStartFind(oldIndex-0x100);
 			evMax(saveFile,oldIndex);
 			job=100;
+			free(saveFile);
 		} else if(job==5){
 			saveFile=saveOpen();
 			pokeSlow(saveFile);
 			job=100;
+			free(saveFile);
 		} else if(job==6){
 			break;
 		}
