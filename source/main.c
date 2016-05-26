@@ -10,6 +10,7 @@
 #include "moves.h"
 #include "menu.h"
 #include "mainMenu.h"
+#include "pkmImport.h"
 
 int errorCheck(char* saveFile){
 	int error=2;
@@ -90,6 +91,12 @@ int main(int argc, char **argv)
 			job=100;
 			free(saveFile);
 		} else if(job==6){
+			saveFile=saveOpen();
+			oldIndex=indexSelectMenu(saveFile);
+			importPkm(saveFile,oldIndex);
+			job=100;
+			free(saveFile);
+		} else if(job==7){
 			break;
 		}
 	}

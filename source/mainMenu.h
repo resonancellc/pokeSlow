@@ -14,7 +14,9 @@ void mainPrints(int i){
 		break;
 	    case 5: printf("%s","Convert All Pokemon to Slowpokes\n");
 		break;
-            case 6: printf("%s","Exit\n");
+	    case 6: printf("%s","Import pokemon.pkm from SD\n");
+		break;
+            case 7: printf("%s","Exit\n");
                 break;
         }
 }
@@ -35,14 +37,14 @@ int mainMenu(){
 		exit=true;
 	}
 	if(kDown & KEY_DOWN){
-		if(i<6){
+		if(i<7){
 			i++;
 			consoleClear();
 			mainPrints(i);
 		}
 	}
 	if(kDown & KEY_UP){
-		if(i>=1){
+		if(i>1){
 			i=i-1;
 			consoleClear();
 			mainPrints(i);

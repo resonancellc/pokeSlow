@@ -68,7 +68,8 @@ main.o: /home/ubuntu/pokeSlow/source/main.c \
  /home/ubuntu/pokeSlow/source/moves.h /home/ubuntu/pokeSlow/source/menu.h \
  /home/ubuntu/pokeSlow/source/pokeIndex.h \
  /home/ubuntu/pokeSlow/source/menuFunc.h \
- /home/ubuntu/pokeSlow/source/mainMenu.h
+ /home/ubuntu/pokeSlow/source/mainMenu.h \
+ /home/ubuntu/pokeSlow/source/pkmImport.h
 
 /home/ubuntu/pokeSlow/source/sav.h:
 
@@ -215,3 +216,5 @@ main.o: /home/ubuntu/pokeSlow/source/main.c \
 /home/ubuntu/pokeSlow/source/menuFunc.h:
 
 /home/ubuntu/pokeSlow/source/mainMenu.h:
+
+/home/ubuntu/pokeSlow/source/pkmImport.h:

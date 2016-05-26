@@ -122,6 +122,7 @@ void expCalc(int pokeIndex, int newLevel, FILE* fp){
 	fwrite(&exp[1],1,1,fp);
 	fwrite(&exp[0],1,1,fp);
 	remove("/pk/bank/exp");
+	free(exp);
 }
 
 int levelEdit(char* saveFile,int pokeIndex,int newLevel){
@@ -213,6 +214,11 @@ int fixPokeName(char* saveFile,int pokeIndex){
 }
 
 int pokeSpecEdit(char* saveFile,int pokeIndex, int* newSpecIndex){
+	int Mew=0x15;
+	int Rhydon=0x01;
+	if(newSpecIndex==&Mew){
+		newSpecIndex=&Rhydon;
+	}
         printf("%s","Writing new Pokemon.\n");
         unsigned int fsize = 0x8dff;
         int start=pokeIndex;

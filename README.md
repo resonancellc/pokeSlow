@@ -1,5 +1,5 @@
 # pokeSlow
-pokeSlow now allows a user to select a PHBankGB Box 1 Pokemon and edit its species, attacks, level, EVs, and IVs.
+pokeSlow now allows a user to select a PHBankGB Box 1 Pokemon and edit its species, attacks, level, EVs, and IVs.  There is also a feature to import a first generation .pkm file located on the SD card at "/pk/bank/pokemon.pkm".
 
 This was a fun little project I decided doing as a way to take a break from life every so often.  It is used in conjunction with the Pokemon Homebrew Bank for the First Generation Virtual Console Games on the 3DS (also known as PHBankGB).  pokeSlow also has an option to convert all pokemon you have saved in the first box of the bank into Slowpokes for no reason besides pure amusement.
 
@@ -24,7 +24,17 @@ The main menu contains the following:
 4. Max a Pokemon's IVs
 5. Max a Pokemon's EVs
 6. Convert All Pokemon to Slowpokes
-7. Exit
+7. Import pokemon.pkm from SD 
+8. Exit
+
+## Glitch Pokemon - I don't recommend this
+
+There have been problems with editing Mew into the game.  My theory is this has to do with Mew's coding in the game, as it wasn't coded like a regular Pokemon.  Due to this, any attempts to change a species to Mew will result in a Rhydon.
+
+The alternative to get a Mew is using the pokemon.pkm injector with a Mew obtained from a save.  Getting a Mew from the Mew Glitch won't result in a bad Pokemon, because of the way the Mew is called into battle (unlike Missingno).
+This can be done on the VC games, but finding a clone of the 1999 TRU Mew online is a bit more memorable.
+
+With this feature, those experienced enough can get a GlitchDex.  Though, please don't try this if you don't have knoweldge on the various glitches in the game, as some are extremely dangerous.
 
 ## A Note on Generation 1 IVs and EVs
 
