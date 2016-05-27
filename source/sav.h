@@ -21,8 +21,8 @@ char* saveOpen(void){
 		fseek(fp, 0, SEEK_SET);
 		char *saveFile = malloc(fsize+1);
 		fread(saveFile, fsize, 1, fp);
-		fclose(fp);
 		printf("%s","Opened bankgb!\n");
 		return saveFile;
 	}
+	fclose(fp);
 }

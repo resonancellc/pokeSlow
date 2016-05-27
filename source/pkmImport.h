@@ -15,7 +15,7 @@ void mewOT(FILE* fp){
 
 int importPkm(char* saveFile,int pokeIndex){
 	int pkmSize=33;
-	char* pkmFile=malloc(pkmSize);
+	char* pkmFile=malloc(pkmSize+1);
 	FILE* pkm=fopen("/pk/bank/pokemon.pkm","rb");
 	if(pkm==NULL){
 		printf("%s","Can't open pokemon.pkm");
@@ -79,6 +79,7 @@ int importPkm(char* saveFile,int pokeIndex){
 	        saveFile=saveOpen();
 	        fixPokeName(saveFile,pokeIndex-0x100);
 	        printf("%s","\nDone!");
+		free(saveFile);
 	}
 	fclose(pkm);
 	free(pkmFile);

@@ -41,6 +41,7 @@ int main(int argc, char **argv)
 	}
 	int job=100;
 	int oldIndex=0;
+	int injectNum=0;
 	backupSave(saveFile);
 	while (aptMainLoop())
 	{
@@ -92,10 +93,10 @@ int main(int argc, char **argv)
 			free(saveFile);
 		} else if(job==6){
 			saveFile=saveOpen();
-			oldIndex=indexSelectMenu(saveFile);
-			importPkm(saveFile,oldIndex);
-			job=100;
+			injectNum=indexSelectMenu(saveFile);
+			importPkm(saveFile,injectNum);
 			free(saveFile);
+			job=100;
 		} else if(job==7){
 			break;
 		}

@@ -81,157 +81,157 @@
 001016c4 t .udivsi3_skip_div0_test
 001018b0 00000020 T __aeabi_uidivmod
 001018d0 00000050 T backupSave
-00101920 00000090 T saveOpen
-001019b0 00000118 T evMax
-00101ac8 00000124 T ivMax
-00101bec 00000084 T inArray
-00101c70 00000220 T expCalc
-00101e90 00000174 T levelEdit
-00102004 000001c8 T fixPokeName
-001021cc 000001c0 T pokeSpecEdit
-0010238c 0000019c T pokeSlow
-00102528 00000194 T attackEdit
-001026bc 000000f4 T levelSelect
-001027b0 00000104 T newAttackIndex
-001028b4 00000124 T oldAttackIndex
-001029d8 00000104 T newSpecMenu
-00102adc 0000014c T indexSelectMenu
-00102c28 000000c4 T mainPrints
-00102cec 000000c8 T mainMenu
-00102db4 000000b4 T mewOT
-00102e68 00000280 T importPkm
-001030e8 00000044 T errorCheck
-0010312c 00000248 T main
-00103374 0000001c T debug_write
-00103390 000001ac T consoleDrawChar
-0010353c 00000128 T consolePrintChar
-00103664 00000184 t consoleCls
-001037e8 000000f8 T consoleInit
-001038e0 00000138 t consoleClearLine
-00103a18 000000c0 t newRow
-00103ad8 0000086c T con_write
-00104344 0000000c T consoleClear
-00104350 0000008c t gfxSetFramebufferInfo.part.0
-001043dc 00000018 T gfxSetScreenFormat
-001043f4 00000014 T gfxSetDoubleBuffering
-00104408 00000070 T gfxSetFramebufferInfo
-00104478 00000088 T gfxWriteFramebufferInfo
-00104500 000001d0 T gfxInit
-001046d0 00000010 T gfxInitDefault
-001046e0 000000e0 T gfxExit
-001047c0 000000b0 T gfxGetFramebuffer
-00104870 000000cc T gfxFlushBuffers
-0010493c 00000070 T gfxConfigScreen
-001049ac 00000020 T gfxSwapBuffers
-001049cc 00000020 T gfxSwapBuffersGpu
-001049ec 00000068 t __apt_initservicehandle
-00104a54 00000004 W _aptDebug
-00104a58 00000098 T aptInitCaptureInfo
-00104af0 00000028 T aptWaitStatusEvent
-00104b18 00000060 T aptGetMenuAppID
-00104b78 0000006c T aptSetStatus
-00104be4 00000048 T APT_GetLockHandle
-00104c2c 00000060 T APT_Initialize
-00104c8c 00000034 T APT_Finalize
-00104cc0 00000048 T APT_InquireNotification
-00104d08 0000002c T APT_PrepareToJumpToHomeMenu
-00104d34 00000050 T APT_JumpToHomeMenu
-00104d84 00000034 T APT_PrepareToJumpToApplication
-00104db8 00000050 T APT_JumpToApplication
-00104e08 00000034 T APT_NotifyToWait
-00104e3c 0000008c T APT_AppletUtility
-00104ec8 00000188 T aptAppletUtility_Exit_RetToApp
-00105050 0000003c T aptAppletClosed
-0010508c 00000114 t aptAppStarted
-001051a0 00000298 T aptInit
-00105438 0000006c T APT_ReceiveParameter
-001054a4 00000064 T APT_SendParameter
-00105508 00000044 T APT_SendCaptureBufferInfo
-0010554c 00000264 T aptReturnToMenu
-001057b0 00000038 T APT_ReplySleepQuery
-001057e8 00000034 T APT_ReplySleepNotificationComplete
-0010581c 00000418 T aptEventHandler
-00105c34 00000034 T APT_PrepareToCloseApplication
-00105c68 00000050 T APT_CloseApplication
-00105cb8 000002d0 T aptExit
-00105f88 0000006c T APT_CheckNew3DS_System
-00105ff4 0000008c T APT_CheckNew3DS
-00106080 00000054 T APT_StartLibraryApplet
-001060d4 00000174 T aptAppletStarted
-00106248 000001a4 T aptMainLoop
-001063ec 00000124 t gspEventThreadMain
-00106510 00000074 T gspInit
-00106584 0000003c T gspExit
-001065c0 000000d0 T gspInitEventHandler
-00106690 0000005c T gspExitEventHandler
-001066ec 00000058 T gspWaitForEvent
-00106744 0000006c T GSPGPU_SetBufferSwap
-001067b0 0000004c T GSPGPU_FlushDataCache
-001067fc 00000034 T GSPGPU_SetLcdForceBlack
-00106830 00000064 T GSPGPU_RegisterInterruptRelayQueue
-00106894 0000002c T GSPGPU_UnregisterInterruptRelayQueue
-001068c0 00000048 T GSPGPU_AcquireRight
-00106908 0000002c T GSPGPU_ReleaseRight
-00106934 00000080 T GSPGPU_ImportDisplayCaptureInfo
-001069b4 0000002c T GSPGPU_SaveVramSysArea
-001069e0 0000002c T GSPGPU_RestoreVramSysArea
-00106a0c 000000d8 T hidExit
-00106ae4 00000238 T hidScanInput
-00106d1c 00000010 T hidKeysDown
-00106d2c 00000090 T HIDUSER_GetHandles
-00106dbc 00000184 T hidInit
-00106f40 000000b0 T irrstScanInput
-00106ff0 0000001c T irrstKeysHeld
-0010700c 00000050 T IRRST_GetHandles
-0010705c 00000148 T irrstInit
-001071a4 0000002c T IRRST_Shutdown
-001071d0 000000b0 T irrstExit
-00107280 000000f4 T __system_initArgv
-00107374 00000038 W __libctru_init
-001073ac 00000030 t __ctru_get_reent
-001073dc 000000e8 T __system_initSyscalls
-001074c4 T svcControlMemory
-001074e4 T svcExitProcess
-001074ec T svcCreateThread
-0010750c T svcExitThread
-00107514 T svcCreateEvent
-00107528 T svcSignalEvent
-00107530 T svcClearEvent
-00107538 T svcMapMemoryBlock
-00107540 T svcUnmapMemoryBlock
-00107548 T svcCreateAddressArbiter
-0010755c T svcArbitrateAddress
-00107574 T svcCloseHandle
-0010757c T svcWaitSynchronization
-00107584 T svcWaitSynchronizationN
-001075ac T svcDuplicateHandle
-001075c0 T svcGetSystemTick
-001075c8 T svcGetSystemInfo
-001075e0 T svcConnectToPort
-001075f4 T svcSendSyncRequest
-001075fc T svcBreak
-00107604 T svcOutputDebugString
-0010760c 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
-00107630 00000004 t addrMapNodeDestructor(rbtree_node*)
-00107634 00000140 T linearMemAlign
-00107774 00000008 T linearAlloc
-0010777c 00000050 T linearFree
-001077cc 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
-001077f0 00000004 t addrMapNodeDestructor(rbtree_node*)
-001077f4 000000f4 T mappableAlloc
-001078e8 00000050 T mappableFree
-00107938 000000a0 T MemPool::CoalesceRight(MemBlock*)
-001079d8 0000018c T MemPool::Allocate(MemChunk&, unsigned long, int)
-00107b64 00000104 T MemPool::Deallocate(MemChunk const&)
-00107c68 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
-00107c8c 00000004 t addrMapNodeDestructor(rbtree_node*)
-00107c90 00000130 T vramMemAlign
-00107dc0 00000008 T vramAlloc
-00107dc8 00000050 T vramFree
-00107e18 00000094 T envGetHandle
-00107eac 0000004c T envDestroyHandles
-00107ef8 00000058 t getSysTime
-00107f50 00000024 T osGetMemRegionUsed
+00101920 00000088 T saveOpen
+001019a8 00000118 T evMax
+00101ac0 00000124 T ivMax
+00101be4 00000084 T inArray
+00101c68 00000220 T expCalc
+00101e88 00000174 T levelEdit
+00101ffc 000001c8 T fixPokeName
+001021c4 000001c0 T pokeSpecEdit
+00102384 0000019c T pokeSlow
+00102520 00000194 T attackEdit
+001026b4 000000f4 T levelSelect
+001027a8 00000104 T newAttackIndex
+001028ac 00000124 T oldAttackIndex
+001029d0 00000104 T newSpecMenu
+00102ad4 0000014c T indexSelectMenu
+00102c20 000000c4 T mainPrints
+00102ce4 000000c8 T mainMenu
+00102dac 000000b4 T mewOT
+00102e60 0000028c T importPkm
+001030ec 00000044 T errorCheck
+00103130 00000248 T main
+00103378 0000001c T debug_write
+00103394 000001ac T consoleDrawChar
+00103540 00000128 T consolePrintChar
+00103668 00000184 t consoleCls
+001037ec 000000f8 T consoleInit
+001038e4 00000138 t consoleClearLine
+00103a1c 000000c0 t newRow
+00103adc 0000086c T con_write
+00104348 0000000c T consoleClear
+00104354 0000008c t gfxSetFramebufferInfo.part.0
+001043e0 00000018 T gfxSetScreenFormat
+001043f8 00000014 T gfxSetDoubleBuffering
+0010440c 00000070 T gfxSetFramebufferInfo
+0010447c 00000088 T gfxWriteFramebufferInfo
+00104504 000001d0 T gfxInit
+001046d4 00000010 T gfxInitDefault
+001046e4 000000e0 T gfxExit
+001047c4 000000b0 T gfxGetFramebuffer
+00104874 000000cc T gfxFlushBuffers
+00104940 00000070 T gfxConfigScreen
+001049b0 00000020 T gfxSwapBuffers
+001049d0 00000020 T gfxSwapBuffersGpu
+001049f0 00000068 t __apt_initservicehandle
+00104a58 00000004 W _aptDebug
+00104a5c 00000098 T aptInitCaptureInfo
+00104af4 00000028 T aptWaitStatusEvent
+00104b1c 00000060 T aptGetMenuAppID
+00104b7c 0000006c T aptSetStatus
+00104be8 00000048 T APT_GetLockHandle
+00104c30 00000060 T APT_Initialize
+00104c90 00000034 T APT_Finalize
+00104cc4 00000048 T APT_InquireNotification
+00104d0c 0000002c T APT_PrepareToJumpToHomeMenu
+00104d38 00000050 T APT_JumpToHomeMenu
+00104d88 00000034 T APT_PrepareToJumpToApplication
+00104dbc 00000050 T APT_JumpToApplication
+00104e0c 00000034 T APT_NotifyToWait
+00104e40 0000008c T APT_AppletUtility
+00104ecc 00000188 T aptAppletUtility_Exit_RetToApp
+00105054 0000003c T aptAppletClosed
+00105090 00000114 t aptAppStarted
+001051a4 00000298 T aptInit
+0010543c 0000006c T APT_ReceiveParameter
+001054a8 00000064 T APT_SendParameter
+0010550c 00000044 T APT_SendCaptureBufferInfo
+00105550 00000264 T aptReturnToMenu
+001057b4 00000038 T APT_ReplySleepQuery
+001057ec 00000034 T APT_ReplySleepNotificationComplete
+00105820 00000418 T aptEventHandler
+00105c38 00000034 T APT_PrepareToCloseApplication
+00105c6c 00000050 T APT_CloseApplication
+00105cbc 000002d0 T aptExit
+00105f8c 0000006c T APT_CheckNew3DS_System
+00105ff8 0000008c T APT_CheckNew3DS
+00106084 00000054 T APT_StartLibraryApplet
+001060d8 00000174 T aptAppletStarted
+0010624c 000001a4 T aptMainLoop
+001063f0 00000124 t gspEventThreadMain
+00106514 00000074 T gspInit
+00106588 0000003c T gspExit
+001065c4 000000d0 T gspInitEventHandler
+00106694 0000005c T gspExitEventHandler
+001066f0 00000058 T gspWaitForEvent
+00106748 0000006c T GSPGPU_SetBufferSwap
+001067b4 0000004c T GSPGPU_FlushDataCache
+00106800 00000034 T GSPGPU_SetLcdForceBlack
+00106834 00000064 T GSPGPU_RegisterInterruptRelayQueue
+00106898 0000002c T GSPGPU_UnregisterInterruptRelayQueue
+001068c4 00000048 T GSPGPU_AcquireRight
+0010690c 0000002c T GSPGPU_ReleaseRight
+00106938 00000080 T GSPGPU_ImportDisplayCaptureInfo
+001069b8 0000002c T GSPGPU_SaveVramSysArea
+001069e4 0000002c T GSPGPU_RestoreVramSysArea
+00106a10 000000d8 T hidExit
+00106ae8 00000238 T hidScanInput
+00106d20 00000010 T hidKeysDown
+00106d30 00000090 T HIDUSER_GetHandles
+00106dc0 00000184 T hidInit
+00106f44 000000b0 T irrstScanInput
+00106ff4 0000001c T irrstKeysHeld
+00107010 00000050 T IRRST_GetHandles
+00107060 00000148 T irrstInit
+001071a8 0000002c T IRRST_Shutdown
+001071d4 000000b0 T irrstExit
+00107284 000000f4 T __system_initArgv
+00107378 00000038 W __libctru_init
+001073b0 00000030 t __ctru_get_reent
+001073e0 000000e8 T __system_initSyscalls
+001074c8 T svcControlMemory
+001074e8 T svcExitProcess
+001074f0 T svcCreateThread
+00107510 T svcExitThread
+00107518 T svcCreateEvent
+0010752c T svcSignalEvent
+00107534 T svcClearEvent
+0010753c T svcMapMemoryBlock
+00107544 T svcUnmapMemoryBlock
+0010754c T svcCreateAddressArbiter
+00107560 T svcArbitrateAddress
+00107578 T svcCloseHandle
+00107580 T svcWaitSynchronization
+00107588 T svcWaitSynchronizationN
+001075b0 T svcDuplicateHandle
+001075c4 T svcGetSystemTick
+001075cc T svcGetSystemInfo
+001075e4 T svcConnectToPort
+001075f8 T svcSendSyncRequest
+00107600 T svcBreak
+00107608 T svcOutputDebugString
+00107610 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+00107634 00000004 t addrMapNodeDestructor(rbtree_node*)
+00107638 00000140 T linearMemAlign
+00107778 00000008 T linearAlloc
+00107780 00000050 T linearFree
+001077d0 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+001077f4 00000004 t addrMapNodeDestructor(rbtree_node*)
+001077f8 000000f4 T mappableAlloc
+001078ec 00000050 T mappableFree
+0010793c 000000a0 T MemPool::CoalesceRight(MemBlock*)
+001079dc 0000018c T MemPool::Allocate(MemChunk&, unsigned long, int)
+00107b68 00000104 T MemPool::Deallocate(MemChunk const&)
+00107c6c 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+00107c90 00000004 t addrMapNodeDestructor(rbtree_node*)
+00107c94 00000130 T vramMemAlign
+00107dc4 00000008 T vramAlloc
+00107dcc 00000050 T vramFree
+00107e1c 00000094 T envGetHandle
+00107eb0 0000004c T envDestroyHandles
+00107efc 00000058 t getSysTime
+00107f54 00000024 T osGetMemRegionUsed
 00107f78 000000f4 T __libctru_gtod
 00108070 00000034 T __ctru_speedup_config
 001080a4 00000050 T srvExit
